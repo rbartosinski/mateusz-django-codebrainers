@@ -12,7 +12,7 @@
 <h1>Book an appointment</h1>
 
 
-<form action="{% url 'polls:book' %}" method="get">
+<form action="{% url 'polls:book2' %}" method="post">
 {% csrf_token %}
 
 {{ form|bootstrap_horizontal }}
