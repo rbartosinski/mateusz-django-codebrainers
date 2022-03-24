@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+
+
+<h1>Zabiegi wykonywane przez: {{staff.first_name}}</h1>
+
+{% endblock %}

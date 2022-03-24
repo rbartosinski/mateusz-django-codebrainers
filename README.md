@@ -1,1 +1,1 @@
-# mateusz-django-codebrainers
+# Mateusz Django Codebrainers

@@ -1,0 +1,25 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+{% load bootstrap %}
+
+{% if messages %}
+{% for message in messages %}
+<br><h3>{{ message }}</h3>
+{% endfor %}
+{% endif %}
+
+<h1>Book an appointment</h1>
+
+
+<form action="{% url 'polls:book' %}" method="get">
+{% csrf_token %}
+
+{{ form|bootstrap_horizontal }}
+
+
+<input class="btn btn-primary btn-lg" type="submit" value="Create">
+</form>
+
+<a href="{% url 'polls:index' %}">Back</a>
+{% endblock %}

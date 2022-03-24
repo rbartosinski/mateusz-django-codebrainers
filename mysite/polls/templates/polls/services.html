@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<br><h3>{{ message }}</h3>
+{% endfor %}
+{% endif %}
+
+<h1>Avaible Services</h1>
+<br><br>
+{% for object in servicesList  %}
+<a href="{% url 'polls:detail'  object.id %}">{{ object.id }}</a>. {{ object.service_text }}<br>
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<br><h3>{{ message }}</h3>
+Message tag: {{ message.tags }}
+{% endfor %}
+{% endif %}
+
+Nasza super strona, mainpage
+
+
+{% endblock %}

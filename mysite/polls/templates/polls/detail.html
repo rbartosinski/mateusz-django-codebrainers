@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+    <h1>{{ service.service_text }}</h1>
+
+Cena: {{ service.service_price }} PLN<br>
+Czas trwania: {{ service.service_time}}<br>
+Czym jest {{ service.service_text }}: <br>
+{{ service.service_description}}<br>
+<h2>Usługe wykonują</h2>
+{% for i in service.employee.all %}
+{{ i }}
+{% endfor %}
+{% endblock %}
