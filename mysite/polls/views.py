@@ -93,7 +93,8 @@ class BookView(View):
                 appointment_surname=form.cleaned_data['appointment_surname'],
                 appointment_email=form.cleaned_data['appointment_email'],
                 appointment_date=form.cleaned_data['appointment_date'],
+                appointment_employee=form.cleaned_data['appointment_employee'],
                 appointment_service=service,
             )
-        messages.success(request, 'Great, your on {} visit is now reserved'.format(form.cleaned_data['appointment_date']))
+        messages.success(request, 'Great, your visit on {} is now reserved'.format(form.cleaned_data['appointment_date']))
         return HttpResponseRedirect(reverse('polls:index'))
